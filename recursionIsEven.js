@@ -1,14 +1,19 @@
 function isEven(x) {
-  if (x == 1 || x <0)
-    return false;
+  if (x === 1 || x === -1){
+  return false;
+}
   else if (x === 0){
-      return true;
+    return true;
+  }
+  
+  else if (x<0) {
+    return isEven(x+2);
   }
   else {
-    x=isEven(x-2);
-    console.log(x)
+    return isEven(x-2);
   }
 }
 
 console.log(isEven(30));
-// → 8
+console.log(isEven(-1));
+console.log(isEven(-2));
