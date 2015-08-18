@@ -7,10 +7,16 @@
 ////////////////////////////////////////////////////////////////////////////
 
 
+ function reverseArray(arr){
+    
+    var reversedArr = [];
+    
+    for(i=1; i<=arr.length; i++) {
+        reversedArr.push(arr[arr.length - i]);
+        
+        
+    }
+    //console.log(reversedArr);
+    }
  
 console.log(reverseArray(["A", "B", "C"]));
-// → ["C", "B", "A"];
-var arrayValue = [1, 2, 3, 4, 5];
-reverseArrayInPlace(arrayValue);
-console.log(arrayValue);
-// → [5, 4, 3, 2, 1]
