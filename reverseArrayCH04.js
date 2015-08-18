@@ -6,8 +6,7 @@
 //dbryant 18aug15 @tolkadot
 ////////////////////////////////////////////////////////////////////////////
 
-
- function reverseArray(arr){
+function reverseArray(arr){
     
     var reversedArr = [];
     
@@ -20,3 +19,35 @@
     }
  
 console.log(reverseArray(["A", "B", "C"]));
+
+function reverseArrayInPlace(arr){
+    
+    
+    var halfLength = arr.length;
+    
+    if(halfLength%2 === 0) { //length is even
+        halfLength = halfLength/2;
+    }
+    else {halfLength = (halfLength/2) - 0.5;}
+    
+  for(i=0; i<=halfLength; i++)
+  {
+    var temp = arr[arr.length -1 -i];
+    arr[arr.length -1 -i] = arr[i] ;
+   arr[i] = temp;
+  }
+  
+}
+
+
+reverseArrayInPlace([1, 2, 3, 4, 5]);
+var arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
+
+
+// → ["C", "B", "A"];
+//var arrayValue = [1, 2, 3, 4, 5];
+
+//console.log(arrayValue);
+// → [5, 4, 3, 2, 1]
