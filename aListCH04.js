@@ -15,11 +15,11 @@
 
 
 function arrayToList(arr) {
-    
-    for(i=arr.length-1; i>=0; i--)
-    var list = {
-  value: arr[i],
-  rest:  list };
+  var list = null;  //set the initial list to null.
+    for(i=arr.length-1; i>=0; i--) //count down backwards to nest from the inside out.
+     list = {
+  value: arr[i], //set the value to the array value
+  rest:  list }; // this will nest the list
   console.log( list, list.rest);
   }
 
